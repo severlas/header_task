@@ -4,16 +4,20 @@ const productCart = prompt('Hello\nYou can input a shopping list (Please format 
       listProductItem = document.querySelector('.cart__open__product'),
       listQuantityItem = document.querySelector('.cart__open__quantity');
 
-document.querySelector('.quantity_item').innerText = quantityCart;
+if (productCart === '') {
+    document.querySelector('.quantity_item').innerText = 0;
+}else {
+    document.querySelector('.quantity_item').innerText = quantityCart;
+}    
 
-function createdListItem (item, listItem) {
+function addListItem (item, listItem) {
     let elementCreated = document.createElement('li');
     elementCreated.innerText = `${item}`;
     listItem.append(elementCreated);
 }
 
 for (let i of listProduct) {
-    createdListItem(i, listProductItem);
+    addListItem(i, listProductItem);
     let quantityProduct = prompt(`Input quantity product ${i}:`, '');
-    createdListItem(quantityProduct, listQuantityItem);
+    addListItem(quantityProduct, listQuantityItem);
 }
