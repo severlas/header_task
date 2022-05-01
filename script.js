@@ -1,23 +1,26 @@
-const productCart = prompt('Hello\nYou can input a shopping list (Please format input ", ")', ''),
+const productCart = prompt('Hello\nEnter a list of products (Format input ", ")', ''),
       listProduct = productCart.split(', '),
       quantityCart = listProduct.length,
-      listProductItem = document.querySelector('.cart__open__product'),
-      listQuantityItem = document.querySelector('.cart__open__quantity');
+      listProductItem = document.querySelector('.content__product'),
+      listQuantityItem = document.querySelector('.content__quantity');
 
 if (productCart === '') {
-    document.querySelector('.quantity_item').innerText = 0;
+    document.querySelector('.cart-quantity__number').innerText = 0;
 }else {
-    document.querySelector('.quantity_item').innerText = quantityCart;
+    document.querySelector('.cart-quantity__number').innerText = quantityCart;
 }    
 
 function addListItem (item, listItem) {
-    let elementCreated = document.createElement('li');
-    elementCreated.innerText = `${item}`;
-    listItem.append(elementCreated);
+    let elementCreate = document.createElement('div');
+    elementCreate.innerText = `${item}`;
+    listItem.append(elementCreate);
 }
 
 for (let i of listProduct) {
     addListItem(i, listProductItem);
     let quantityProduct = prompt(`Input quantity product ${i}:`, '');
+    if (quantityProduct === '') {
+        quantityProduct = 1;
+    }
     addListItem(quantityProduct, listQuantityItem);
 }

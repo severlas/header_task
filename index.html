@@ -12,39 +12,82 @@
     <title>A C M E</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div>
-                    <img class="logo_menu" src="img/logo_menu.svg" alt="logo_menu">
-                </div>
-                <div class="wrapper">
-                    <ul class="menu">
-                        <li class="menu__item"><a href="#">Home</a></li>
-                        <li class="menu__item"><a href="#">About</a></li>
-                        <li class="menu__item"><a href="#">Shop</a></li>
-                        <li class="menu__item"><a href="#">Donate</a></li>
-                        <li class="menu__item"><a href="#">Contact</a></li>
-                    </ul>
-                    <div class="cart">
-                        <img class="logo_cart" src="img/logo_cart.svg" alt="logo_cart">
-                        <div class="cart__open">
-                            <div class="cart__open__title">My Cart</div>
-                            <div class="cart__open__wrapper">
-                                <ul class="cart__open__product">
-                                    <li class="cart__title">Product</li>
-                                </ul>
-                                <ul class="cart__open__quantity">
-                                    <li class="cart_title">Quantity</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="quantity_item"></div>
+    <div class="main_block main_block--background--red">
+        <div class="main_block__container">
+            <div class="header">
+                <div class="header__logo">
+                    <div class="logo">
+                        <img class="logo__image" src="img/logo_menu.svg" alt="logo_menu">
                     </div>
                 </div>
-            </nav>
+                <div class="header__menu">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <div class="button">
+                                <a class="button__link" href="#">Home</a>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <div class="button">
+                                <a class="button__link" href="#">About</a>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <div class="button">
+                                <a class="button__link" href="#">Shop</a>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <div class="button">
+                                <a class="button__link" href="#">Donate</a>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <div class="button">
+                                <a class="button__link" href="#">Contact</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__cart">
+                    <div class="cart">
+                        <img class="logo_cart" src="img/logo_cart.svg" alt="logo_cart">
+                    </div>
+                    <div class="cart-quantity">
+                        <div class="cart-quantity__number"></div>
+                    <div class="cart-window">
+                        <div class="cart-window__title">
+                            <div class="title__text">
+                                My Cart
+                            </div>
+                        </div>
+                        <div class="table_of_content">
+                            <div class="table_of_content__product">
+                                <div class="product__text">
+                                    Product
+                                </div>
+                            </div>
+                            <div class="table_of_content__quantity">
+                                <div class="quantity__text">
+                                    Quantity
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content">
+
+                            <div class="content__product">
+
+                            </div>
+                            <div class="content__quantity">
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
 </body>
 <script src="script.js"></script>
 </html>
